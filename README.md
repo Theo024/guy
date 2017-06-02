@@ -35,3 +35,8 @@ L'utilisation de ```guy``` est similaire à celle de ```git```.
 | commit | commettre |
 | pull | tirer |
 | push | pousser |
+| clean | nettoyer |
+| log | bûche |
+| rebase | rebaser |
+| tag | étiquette |
+
