@@ -5,7 +5,7 @@
 Entrer dans votre terminal la commande suivante :
 
 ```sh
-curl -L -o ~/.guy 
+curl -L -o ~/.guy https://raw.githubusercontent.com/Theo024/Guy/master/.guy
 ```
 
 Ajouter dans votre .bashrc ou votre .zshrc les lignes suivantes :
