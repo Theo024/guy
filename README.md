@@ -32,11 +32,10 @@ L'utilisation de ```guy``` est similaire à celle de ```git```.
 | add | ajouter |
 | rm | retirer |
 | reset | réinitialiser |
-| commit | commettre |
+| commit | engager |
 | pull | tirer |
 | push | pousser |
 | clean | nettoyer |
 | log | bûche |
 | rebase | rebaser |
 | tag | étiquette |
-

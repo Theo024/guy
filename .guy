@@ -1,41 +1,48 @@
 function do_git {
     local cmd=$1
-        shift
-        local extra=""
-        if [[ "$cmd" == "tirer" ]]; then
-            extra="pull"
-                elif [[ "$cmd" == "pousser" ]]; then
-                extra="push"
-                elif [[ "$cmd" == "ajouter" ]]; then
-                extra="add"
-                elif [[ "$cmd" == "retirer" ]]; then
-                extra="rm"
-                elif [[ "$cmd" == "réinitialiser" ]]; then
-                extra="reset"
-                elif [[ "$cmd" == "commettre" ]]; then
-                extra="commit"
-                elif [[ "$cmd" == "vérifier" ]]; then
-                extra="checkout"
-                elif [[ "$cmd" == "situation" ]]; then
-                extra="status"
-                elif [[ "$cmd" == "initialiser" ]]; then
-                extra="init"
-                elif [[ "$cmd" == "branche" ]]; then
-                extra="branch"
-                elif [[ "$cmd" == "fusionner" ]]; then
-                extra="merge"
-                elif [[ "$cmd" == "reproduire" ]]; then
-                extra="clone"
-                elif [[ "$cmd" == "nettoyer" ]]; then
-                extra="clean"
-                elif [[ "$cmd" == "bûche" ]]; then
-                extra="log"
-                elif [[ "$cmd" == "rebaser" ]]; then
-                extra="rebase"
-                elif [[ "$cmd" == "étiquette" ]]; then
-                extra="tag"
-                fi
-                git $extra $@
+    shift
+    local extra=""
+    local print="0"
+    if [[ "$cmd" == "tirer" ]]; then
+        extra="pull"
+    elif [[ "$cmd" == "pousser" ]]; then
+        extra="push"
+    elif [[ "$cmd" == "ajouter" ]]; then
+        extra="add"
+    elif [[ "$cmd" == "retirer" ]]; then
+        extra="rm"
+    elif [[ "$cmd" == "réinitialiser" ]]; then
+        extra="reset"
+    elif [[ "$cmd" == "engager" ]]; then
+        extra="commit"
+    elif [[ "$cmd" == "vérifier" ]]; then
+        extra="checkout"
+    elif [[ "$cmd" == "situation" ]]; then
+        extra="status"
+    elif [[ "$cmd" == "initialiser" ]]; then
+        extra="init"
+    elif [[ "$cmd" == "branche" ]]; then
+        extra="branch"
+    elif [[ "$cmd" == "fusionner" ]]; then
+        extra="merge"
+    elif [[ "$cmd" == "reproduire" ]]; then
+        extra="clone"
+    elif [[ "$cmd" == "nettoyer" ]]; then
+        extra="clean"
+    elif [[ "$cmd" == "bûche" ]]; then
+        extra="log"
+    elif [[ "$cmd" == "rebaser" ]]; then
+        extra="rebase"
+    elif [[ "$cmd" == "étiquette" ]]; then
+        extra="tag"
+    elif [[ "$cmd" == "qui" ]]; then
+        print="Bah Guy Teub !"
+    fi
+    if [[ $print == "0" ]]; then
+        git $extra $@
+    else
+        echo $print
+    fi
 }
 
 alias guy='do_git'
