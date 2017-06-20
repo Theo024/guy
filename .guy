@@ -35,6 +35,12 @@ function do_git {
         extra="rebase"
     elif [[ "$cmd" == "étiquette" ]]; then
         extra="tag"
+    elif [[ "$cmd" == "collecter" ]]; then
+        extra="fetch"
+    elif [[ "$cmd" == "bouger" ]]; then
+        extra="mv"
+    elif [[ "$cmd" == "démon" ]]; then
+        extra="daemon"
     elif [[ "$cmd" == "qui" ]]; then
         print="Bah Guy Teub !"
     fi
